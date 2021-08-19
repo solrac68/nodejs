@@ -1,2 +1,29 @@
 C:\Fuentes\Node\01-hola-mundo>node app.js
 Hola Mundo
+
+33. package.json - init - install - uninstall
+Creación del package.json
+
+Punto inicial de cualquier paquete de JSON
+03-bases-node git:(main) ✗ npm init
+
+Ejecutar la aplicación utilizando el package.json
+npm run base3
+
+
+Instalación de paquetes
+npm install colors
+
+// Instalar nodemon en modo de desarrollo
+npm install nodemon --save-dev
+
+// Desistalar un paquete
+npm uninstall nodemon
+
+// Instalar una versión específica
+npm i colors@1.0.0
+
+// Actualizar los paquetes
+npm update
+
+

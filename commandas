@@ -26,4 +26,43 @@ npm i colors@1.0.0
 // Actualizar los paquetes
 npm update
 
+// Utilizar Yargs
+https://www.npmjs.com/package/yargs
+https://yargs.js.org/
+
+
+C:\Fuentes\Node\03-bases-node>node app.js --base=5 --otrabase u --listar
+{ _: [], base: 5, otrabase: 'u', listar: true, '$0': 'app.js' }
+base: yargs: 5
+base: tipo: undefined
+otrabase: otrabase: u
+
+Este comando puede ver la versión de package.json
+
+C:\Fuentes\Node\03-bases-node>node app --version
+0.0.1
+
+C:\Fuentes\Node\03-bases-node>node app --version
+0.0.2
+
+
+35. Configuraciones de Yargs
+
+C:\Fuentes\Node\03-bases-node>node app --help
+Options:
+      --help     Show help                                             [boolean]
+      --version  Show version number                                   [boolean]
+  -b, --base                                                            [number]
+
+C:\Fuentes\Node\03-bases-node>node app --base=5
+{ _: [], base: 5, b: 5, '$0': 'app' }
+base: yargs: 5
+
+C:\Fuentes\Node\03-bases-node>node app --b=5    
+{ _: [], b: 5, base: 5, '$0': 'app' }
+base: yargs: 5
+
+
+
+
 

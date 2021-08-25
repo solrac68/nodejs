@@ -1,6 +1,6 @@
 {
   "name": "03-bases-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tabla de multiplicar con archivo de texto",
   "main": "app.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "Carlos Hincapie",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.1.1"
   }
 }

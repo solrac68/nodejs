@@ -1,12 +1,7 @@
 const fs = require('fs');
 
 
-const crearArchivoSyn = (base = 7) => {
-
-    console.clear();
-    console.log('================================================');
-    console.log(`                  Tabla del: ${base}`)
-    console.log('================================================');
+const crearArchivoSyn = (base = 7, listar=true) => {
 
     let salida = '';
     for(let i = 1;i <= 10;i++){
@@ -14,7 +9,13 @@ const crearArchivoSyn = (base = 7) => {
 
         salida += vari;
     }
-    console.log(salida);
+
+    if (listar) {
+        console.log('================================================');
+        console.log(`                  Tabla del: ${base}`)
+        console.log('================================================');
+        console.log(salida);
+    }
 
     const nombreArchivo = `tabla-${base}.txt`;
 
@@ -24,9 +25,9 @@ const crearArchivoSyn = (base = 7) => {
 
 }
 
-const crearArchivo = async(base = 7) => {
+const crearArchivo = async(base = 7, listar) => {
     try {
-        const nombreArchivo = await crearArchivoSyn(base);
+        const nombreArchivo = await crearArchivoSyn(base, listar);
         return nombreArchivo;
     } catch (error) {
         throw error;

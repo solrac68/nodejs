@@ -1,14 +1,32 @@
+const { options } = require('yargs');
 const {crearArchivo} = require('./helpers/multiplicar');
+const argv = require('yargs')
+                .option('b',{
+                    alias:'base',
+                    type:'number',
+                    demandOption: true
+                })
+                .option('l',{
+                    alias:'listar',
+                    type:'boolean',
+                    default:false
+                })
+                .check((argv,options) => {
+                    console.log('yargs', argv)
+                    if(isNaN(argv.b)){
+                        throw 'The base has to be a number'
+                    }
+                    return true;
+                })
+                .argv;
 
-//const base = 17;
+console.clear();
 
-//console.log(process.argv);
+console.log(argv);
 
-const [,,arg3='base=7'] = process.argv;
-const [,base=5] = arg3.split('=')
+//console.log(`base: yargs: ${argv.base}`);
 
-console.log(base);
 
-crearArchivo(base)
+crearArchivo(argv.base,argv.listar)
     .then(nombreArchivo => console.log(nombreArchivo, 'Creado'))
     .catch(err => console.log(err));

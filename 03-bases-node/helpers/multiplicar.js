@@ -1,19 +1,20 @@
 const fs = require('fs');
+const colors = require('colors');
 
 
 const crearArchivoSyn = (base = 7, listar=true) => {
 
     let salida = '';
     for(let i = 1;i <= 10;i++){
-        let vari =  `${base} X ${i} = ${base * i}\n`;
+        let vari =  `${base} ${'X'.green} ${i} ${'='.green} ${base * i}\n`;
 
         salida += vari;
     }
 
     if (listar) {
-        console.log('================================================');
-        console.log(`                  Tabla del: ${base}`)
-        console.log('================================================');
+        console.log('================================================'.green);
+        console.log(`                  Tabla del: ${base.toString().blue}`.green)
+        console.log('================================================'.green);
         console.log(salida);
     }
 
